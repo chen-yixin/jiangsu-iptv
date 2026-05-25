@@ -41,17 +41,12 @@ def format_extinf(channel: dict) -> str:
     tvg_name = clean_tvg_name(chn_name)
     chn_num_raw = channel.get("chnNum")
     chn_num = str(chn_num_raw) if chn_num_raw is not None else ""
-    title = channel.get("title", "")
-
-    display_name = chn_name
-    if title:
-        display_name = f"{chn_name} {title}"
 
     extinf = (
         f'#EXTINF:-1 group-title="{group}"'
         f' tvg-name="{tvg_name}"'
         f' tvg-chno="{chn_num}",'
-        f'{display_name}'
+        f'{chn_name}'
     )
     return extinf
 
