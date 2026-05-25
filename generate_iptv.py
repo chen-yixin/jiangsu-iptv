@@ -8,6 +8,14 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 
+ISP_CONFIGS = [
+    ("JS_CUCC", "联通", "iptv_js_unicom.m3u"),
+    ("JS_CMCC", "移动", "iptv_js_mobile.m3u"),
+    ("JS_CTCC", "电信", "iptv_js_telecom.m3u"),
+]
+
+API_URL_TEMPLATE = "http://live.epg.gitv.tv/tagNewestEpgList/{isp}/1/100/0.json"
+
 
 def get_group(chn_name: str) -> str:
     if any(k in chn_name for k in ["CCTV", "CGTN"]):
@@ -46,6 +54,38 @@ def format_extinf(channel: dict) -> str:
         f'{display_name}'
     )
     return extinf
+
+
+def fetch_epg(isp: str) -> dict | None:
+    url = API_URL_TEMPLATE.format(isp=isp)
+    try:
+        resp = requests.get(url, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        if data.get("code") == "A000000":
+            return data
+        print(f"[{isp}] API返回异常: code={data.get('code')}, message={data.get('message')}")
+        return None
+    except requests.RequestException as e:
+        print(f"[{isp}] 网络请求失败: {e}")
+        return None
+    except json.JSONDecodeError as e:
+        print(f"[{isp}] JSON解析失败: {e}")
+        return None
+
+
+def dedup_channels(channels: list[dict]) -> list[dict]:
+    seen: dict[str, dict] = {}
+    for ch in channels:
+        code = ch.get("chnunCode", "")
+        if not code:
+            continue
+        existing = seen.get(code)
+        if existing is None or ch.get("chnDefinition", 0) > existing.get("chnDefinition", 0):
+            seen[code] = ch
+    result = list(seen.values())
+    result.sort(key=lambda x: x.get("chnNum") or 9999)
+    return result
 
 
 def main():
