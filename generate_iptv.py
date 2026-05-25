@@ -24,14 +24,15 @@ def get_group(chn_name: str) -> str:
 
 
 def clean_tvg_name(chn_name: str) -> str:
-    return re.sub(r"高清|超清|-8M|-", "", chn_name).strip()
+    return re.sub(r"-?(?:高清|超清|8M)", "", chn_name).strip("- ")
 
 
-def format_extinf(channel: dict, real_url: str) -> str:
+def format_extinf(channel: dict) -> str:
     chn_name = channel.get("chnName", "")
     group = get_group(chn_name)
     tvg_name = clean_tvg_name(chn_name)
-    chn_num = channel.get("chnNum") or ""
+    chn_num_raw = channel.get("chnNum")
+    chn_num = str(chn_num_raw) if chn_num_raw is not None else ""
     title = channel.get("title", "")
 
     display_name = chn_name
