@@ -9,9 +9,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 
 ISP_CONFIGS = [
-    ("JS_CUCC", "联通", "iptv_js_unicom.m3u"),
-    ("JS_CMCC", "移动", "iptv_js_mobile.m3u"),
-    ("JS_CTCC", "电信", "iptv_js_telecom.m3u"),
+    ("JS_CUCC", "联通", "js-cucc.m3u"),
+    ("JS_CMCC", "移动", "js-cmcc.m3u"),
+    ("JS_CTCC", "电信", "js-ctcc.m3u"),
 ]
 
 API_URL_TEMPLATE = "http://live.epg.gitv.tv/tagNewestEpgList/{isp}/1/100/0.json"
