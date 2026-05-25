@@ -131,21 +131,26 @@ def process_isp(code: str, name: str, output: str):
     channels = dedup_channels(channels)
     print(f"[{name}] 去重后 {len(channels)} 个频道")
 
-    lines = []
+    results = {}
     with ThreadPoolExecutor(max_workers=15) as executor:
-        futures = {executor.submit(resolve_stream_url, ch): ch for ch in channels}
+        futures = {executor.submit(resolve_stream_url, ch): i for i, ch in enumerate(channels)}
         for future in as_completed(futures):
+            idx = futures[future]
             try:
                 ch, real_url = future.result()
             except Exception as e:
-                ch = futures[future]
+                ch = channels[idx]
                 print(f"  [ERR] {ch.get('chnName', 'Unknown')} 处理异常: {e}")
                 continue
             if real_url:
-                extinf = format_extinf(ch)
-                lines.append(extinf)
-                lines.append(real_url)
+                results[idx] = (format_extinf(ch), real_url)
                 print(f"  [OK] {ch.get('chnName')}")
+
+    lines = []
+    for idx in sorted(results):
+        extinf, real_url = results[idx]
+        lines.append(extinf)
+        lines.append(real_url)
 
     m3u8 = "#EXTM3U\n" + "\n".join(lines) + "\n"
     with open(output, "w", encoding="utf-8") as f:
