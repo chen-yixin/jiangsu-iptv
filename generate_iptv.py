@@ -84,7 +84,7 @@ def dedup_channels(channels: list[dict]) -> list[dict]:
         if existing is None or ch.get("chnDefinition", 0) > existing.get("chnDefinition", 0):
             seen[code] = ch
     result = list(seen.values())
-    result.sort(key=lambda x: x.get("chnNum") or 9999)
+    result.sort(key=lambda x: x.get("chnNum") if x.get("chnNum") is not None else 9999)
     return result
 
 
