@@ -88,8 +88,65 @@ def dedup_channels(channels: list[dict]) -> list[dict]:
     return result
 
 
+def resolve_stream_url(channel: dict) -> tuple[dict, str | None]:
+    chn_name = channel.get("chnName", "Unknown")
+    play_url = channel.get("playUrl", "")
+    if not play_url:
+        print(f"  [{chn_name}] 缺少playUrl，跳过")
+        return channel, None
+    try:
+        resp = requests.get(play_url, timeout=15)
+        resp.raise_for_status()
+        real = resp.json().get("u", "")
+        if real:
+            return channel, real
+        print(f"  [{chn_name}] playUrl响应中无'u'字段")
+        return channel, None
+    except requests.RequestException as e:
+        print(f"  [{chn_name}] 流地址解析失败: {e}")
+        return channel, None
+    except (json.JSONDecodeError, KeyError) as e:
+        print(f"  [{chn_name}] playUrl响应解析失败: {e}")
+        return channel, None
+
+
+def process_isp(code: str, name: str, output: str):
+    print(f"\n{'='*50}")
+    print(f"处理 {name} ({code}) ...")
+    print(f"{'='*50}")
+
+    data = fetch_epg(code)
+    if data is None:
+        print(f"[{name}] 无法获取EPG数据，跳过")
+        return
+
+    channels = data.get("data", [])
+    print(f"[{name}] 共 {len(channels)} 个频道条目")
+
+    channels = dedup_channels(channels)
+    print(f"[{name}] 去重后 {len(channels)} 个频道")
+
+    lines = []
+    with ThreadPoolExecutor(max_workers=15) as executor:
+        futures = {executor.submit(resolve_stream_url, ch): ch for ch in channels}
+        for future in as_completed(futures):
+            ch, real_url = future.result()
+            if real_url:
+                extinf = format_extinf(ch)
+                lines.append(extinf)
+                lines.append(real_url)
+                print(f"  [OK] {ch.get('chnName')}")
+
+    m3u8 = "#EXTM3U\n" + "\n".join(lines) + "\n"
+    with open(output, "w", encoding="utf-8") as f:
+        f.write(m3u8)
+    print(f"[{name}] 已写入 {len(lines) // 2} 个频道 -> {output}")
+
+
 def main():
-    pass
+    for code, name, output in ISP_CONFIGS:
+        process_isp(code, name, output)
+    print("\n全部完成。")
 
 
 if __name__ == "__main__":
