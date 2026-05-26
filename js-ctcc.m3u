@@ -49,7 +49,7 @@ http://live-gitv-js-yh.189smarthome.com/gitv_live/G_BEIJING-HD-265-8M/G_BEIJING-
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_DONGFANG-HD-265-8M/G_DONGFANG-HD-265-8M.m3u8?p=GITV&area=JS_CTCC
 #EXTINF:-1 group-title="卫视" tvg-name="浙江卫视" tvg-id="G_ZHEJIANG-HD-265-8M" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211104/3d/3dcefe09f024b96686de15b704d35cfc.png",浙江卫视
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_ZHEJIANG-HD-265-8M/G_ZHEJIANG-HD-265-8M.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="江苏" tvg-name="江苏卫视" tvg-id="G_JIANGSU-HD-265-8M" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211209/e7/e78b7314ada43fcf818026921bf0ffe2.png",江苏卫视
+#EXTINF:-1 group-title="卫视" tvg-name="江苏卫视" tvg-id="G_JIANGSU-HD-265-8M" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211209/e7/e78b7314ada43fcf818026921bf0ffe2.png",江苏卫视
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JIANGSU-HD-265-8M/G_JIANGSU-HD-265-8M.m3u8?p=GITV&area=JS_CTCC
 #EXTINF:-1 group-title="卫视" tvg-name="广东卫视" tvg-id="G_GUANGDONG-HD-265-8M" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211116/47/47feae23d410f9d7241492323720c505.png",广东卫视
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_GUANGDONG-HD-265-8M/G_GUANGDONG-HD-265-8M.m3u8?p=GITV&area=JS_CTCC
@@ -121,7 +121,7 @@ http://live-gitv-js-yh.189smarthome.com/gitv_live/G_BINGTUAN/G_BINGTUAN.m3u8?p=G
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_KAKU/G_KAKU.m3u8?p=GITV&area=JS_CTCC
 #EXTINF:-1 group-title="其他" tvg-name="优漫卡通" tvg-id="G_YOUMAN" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211117/1f/1f2ec065f13f1caaf8dc68bffcfa5db5.png",优漫卡通
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_YOUMAN/G_YOUMAN.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="教育" tvg-name="CETV-1" tvg-id="G_CETV-1-HQ" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20220725/60/60cec8ef9c57ca63b85b85e23459509f.png",CETV-1高清
+#EXTINF:-1 group-title="江苏本地" tvg-name="CETV-1" tvg-id="G_CETV-1-HQ" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20220725/60/60cec8ef9c57ca63b85b85e23459509f.png",CETV-1高清
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_CETV-1-HQ/G_CETV-1-HQ.m3u8?p=GITV&area=JS_CTCC
 #EXTINF:-1 group-title="教育" tvg-name="CETV-2" tvg-id="G_CETV-2" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190911/1a/_new_1a16caf049dd5296f010b702001325e9.png",CETV-2
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV&area=JS_CTCC
@@ -129,25 +129,25 @@ http://live-gitv-js-yh.189smarthome.com/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV&
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_CETV-3/G_CETV-3.m3u8?p=GITV&area=JS_CTCC
 #EXTINF:-1 group-title="教育" tvg-name="CETV-4" tvg-id="G_CETV-4" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190827/c2/_new_c29d9ea2fd7f2d5c43934b6b403476b8.png",CETV-4
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_CETV-4/G_CETV-4.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="其他" tvg-name="嘉佳卡通" tvg-id="G_JIAJIA" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211117/9e/9e5521ad20ba8359512a7af0c8f969bb.png",嘉佳卡通
+#EXTINF:-1 group-title="江苏本地" tvg-name="嘉佳卡通" tvg-id="G_JIAJIA" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211117/9e/9e5521ad20ba8359512a7af0c8f969bb.png",嘉佳卡通
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JIAJIA/G_JIAJIA.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="其他" tvg-name="北京休闲体育" tvg-id="G_BEIJINGJS-CQ" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20220725/8b/8b1064bf44721f99abc8b08f1dc940a5.png",北京休闲体育
+#EXTINF:-1 group-title="南京" tvg-name="北京休闲体育" tvg-id="G_BEIJINGJS-CQ" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20220725/8b/8b1064bf44721f99abc8b08f1dc940a5.png",北京休闲体育
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_BEIJINGJS-CQ/G_BEIJINGJS-CQ.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="其他" tvg-name="老故事" tvg-id="G_LAOGUSHI" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190827/d8/_new_d82dcb990686a675416c9dcee3c5ae63.png",老故事
+#EXTINF:-1 group-title="江苏本地" tvg-name="老故事" tvg-id="G_LAOGUSHI" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190827/d8/_new_d82dcb990686a675416c9dcee3c5ae63.png",老故事
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_LAOGUSHI/G_LAOGUSHI.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="江苏" tvg-name="江苏教育" tvg-id="G_JSJY" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/f9/_new_f9c22707f310878c73bbb34e3789323c.png",江苏教育
+#EXTINF:-1 group-title="江苏本地" tvg-name="江苏教育" tvg-id="G_JSJY" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/f9/_new_f9c22707f310878c73bbb34e3789323c.png",江苏教育
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JSJY/G_JSJY.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="江苏" tvg-name="江苏城市" tvg-id="G_JSCS" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/f1/_new_f1b87cdceb7ad5ed0068e9e637421142.png",江苏城市
+#EXTINF:-1 group-title="江苏本地" tvg-name="江苏城市" tvg-id="G_JSCS" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/f1/_new_f1b87cdceb7ad5ed0068e9e637421142.png",江苏城市
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JSCS/G_JSCS.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="江苏" tvg-name="江苏新闻" tvg-id="G_JSGG" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/58/_new_581b9232afc0aa7165d64ec19018f261.png",江苏新闻
+#EXTINF:-1 group-title="江苏本地" tvg-name="江苏新闻" tvg-id="G_JSGG" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/58/_new_581b9232afc0aa7165d64ec19018f261.png",江苏新闻
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JSGG/G_JSGG.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="江苏" tvg-name="江苏体育休闲" tvg-id="G_JSTY" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/6d/_new_6db2300b1916d02c2fe5a4758fbec4e9.png",江苏体育休闲
+#EXTINF:-1 group-title="江苏本地" tvg-name="江苏体育休闲" tvg-id="G_JSTY" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/6d/_new_6db2300b1916d02c2fe5a4758fbec4e9.png",江苏体育休闲
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JSTY/G_JSTY.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="江苏" tvg-name="江苏影视" tvg-id="G_JSYS" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/0b/_new_0b25a8ae1bda244f741f948842f7a2df.png",江苏影视
+#EXTINF:-1 group-title="江苏本地" tvg-name="江苏影视" tvg-id="G_JSYS" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/0b/_new_0b25a8ae1bda244f741f948842f7a2df.png",江苏影视
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JSYS/G_JSYS.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="江苏" tvg-name="江苏综艺" tvg-id="G_JSZY" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/a6/_new_a6dc403df521bf97757bb50339d2e15b.png",江苏综艺
+#EXTINF:-1 group-title="江苏本地" tvg-name="江苏综艺" tvg-id="G_JSZY" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190819/a6/_new_a6dc403df521bf97757bb50339d2e15b.png",江苏综艺
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_JSZY/G_JSZY.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="教育" tvg-name="山东教育" tvg-id="G_SDETV" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211117/87/87674efa6bb8c150d19109b938a44eb6.png",山东教育
+#EXTINF:-1 group-title="江苏本地" tvg-name="山东教育" tvg-id="G_SDETV" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20211117/87/87674efa6bb8c150d19109b938a44eb6.png",山东教育
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_SDETV/G_SDETV.m3u8?p=GITV&area=JS_CTCC
-#EXTINF:-1 group-title="其他" tvg-name="发现之旅" tvg-id="G_FAXIANZL" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190115/c9/_new_c99b723d9f497e021a7fa258455892f3.png",发现之旅
+#EXTINF:-1 group-title="江苏本地" tvg-name="发现之旅" tvg-id="G_FAXIANZL" tvg-logo="http://live-ctcc.pic.gitv.tv/images/20190115/c9/_new_c99b723d9f497e021a7fa258455892f3.png",发现之旅
 http://live-gitv-js-yh.189smarthome.com/gitv_live/G_FAXIANZL/G_FAXIANZL.m3u8?p=GITV&area=JS_CTCC

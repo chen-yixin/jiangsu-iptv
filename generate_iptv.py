@@ -18,13 +18,29 @@ API_URL_TEMPLATE = "http://live.epg.gitv.tv/tagNewestEpgList/{isp}/1/100/0.json"
 CHNINFOS_API_URL_TEMPLATE = "http://live.epg.gitv.tv/chnInfos/{isp}/0.json"
 
 
-def get_group(chn_name: str) -> str:
+def get_group(chn_name: str, chn_type_id: int | None = None) -> str:
+    if chn_type_id is not None:
+        if chn_type_id == 1:
+            return "CCTV"
+        if chn_type_id == 3:
+            return "南京"
+        if chn_type_id == 5:
+            return "江苏本地"
+        if chn_type_id == 2:
+            if "卫视" in chn_name:
+                return "卫视"
+            if any(k in chn_name for k in ["CETV", "教育"]):
+                return "教育"
+            if "江苏" in chn_name:
+                return "江苏本地"
+            return "其他"
+
     if any(k in chn_name for k in ["CCTV", "CGTN"]):
         return "CCTV"
     if "南京" in chn_name:
         return "南京"
     if "江苏" in chn_name:
-        return "江苏"
+        return "江苏本地"
     if "卫视" in chn_name:
         return "卫视"
     if any(k in chn_name for k in ["CETV", "教育"]):
@@ -38,7 +54,8 @@ def clean_tvg_name(chn_name: str) -> str:
 
 def format_extinf(channel: dict, logo_url: str = "") -> str:
     chn_name = channel.get("chnName", "")
-    group = get_group(chn_name)
+    chn_type_id = channel.get("chnTypeId")
+    group = get_group(chn_name, chn_type_id)
     tvg_name = clean_tvg_name(chn_name)
     tvg_id = channel.get("chnCode", "")
 
