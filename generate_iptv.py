@@ -15,8 +15,8 @@ ISP_CONFIGS = [
     # ("JS_CTCC", "电信", "js-ctcc.m3u"),
 ]
 
-API_URL_TEMPLATE = "http://live.epg.gitv.tv/tagNewestEpgList/{isp}/1/100/0.json"
-CHNINFOS_API_URL_TEMPLATE = "http://live.epg.gitv.tv/chnInfos/{isp}/0.json"
+CHANNEL_LIST_URL = "http://live.epg.gitv.tv/tagNewestEpgList/{isp}/1/100/0.json"
+CHANNEL_INFO_URL = "http://live.epg.gitv.tv/chnInfos/{isp}/0.json"
 
 
 def get_group(chn_name: str, chn_type_id: int | None = None) -> str:
@@ -92,7 +92,7 @@ def format_extinf(channel: dict, logo_url: str = "") -> str:
 
 
 def fetch_epg(isp: str) -> dict | None:
-    url = API_URL_TEMPLATE.format(isp=isp)
+    url = CHANNEL_LIST_URL.format(isp=isp)
     try:
         resp = requests.get(url, timeout=30)
         resp.raise_for_status()
@@ -110,7 +110,7 @@ def fetch_epg(isp: str) -> dict | None:
 
 
 def fetch_chninfos(isp: str) -> dict[str, str] | None:
-    url = CHNINFOS_API_URL_TEMPLATE.format(isp=isp)
+    url = CHANNEL_INFO_URL.format(isp=isp)
     try:
         resp = requests.get(url, timeout=30)
         resp.raise_for_status()
