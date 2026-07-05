@@ -10,9 +10,9 @@ import requests
 
 ISP_CONFIGS = [
     ("JS_CUCC", "联通", "js-cucc.m3u"),
+    ("JS_CTCC", "电信", "js-ctcc.m3u"),
     # 以下运营商M3U源暂不可用，预留待以后恢复
     # ("JS_CMCC", "移动", "js-cmcc.m3u"),
-    # ("JS_CTCC", "电信", "js-ctcc.m3u"),
 ]
 
 CHANNEL_LIST_URL = "http://live.epg.gitv.tv/tagNewestEpgList/{isp}/1/100/0.json"
