@@ -15,3 +15,12 @@
 |------|------|------|------|
 | 1 | fanmingming/live | https://github.com/fanmingming/live | EPG + 台标资源 |
 | 2 | 老张 EPG | http://epg.51zmt.top:8000/e.xml | EPG XML 源，网站：https://epg.51zmt.top:8001/ |
+
+## 历史存档
+
+历史 IPTV 源，留档备查。
+
+| 编号 | 名称 | 文件 | 说明 |
+|------|------|------|------|
+| 1 | 江苏移动 MOBAI 源 | `archive/js-cmcc-mobaibox.m3u` | 中国移动魔百盒 IPTV 源 |
+| 2 | 江苏联通 GITV 源 | `archive/js-cucc-gitv.m3u` | 中国联通 GITV IPTV 源 |
