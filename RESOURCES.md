@@ -7,7 +7,7 @@
 | 编号 | 名称 | 地址 | 说明 |
 |------|------|------|------|
 | 1 | CHINA-IPTV | https://github.com/xisohi/CHINA-IPTV | 中国 IPTV 源汇总 |
-| 2 | (预留) | | 待收集 |
+| 2 | 江苏联通单播源 | `sources/js-cucc-unicast.m3u` | 来源：[right.com.cn](https://www.right.com.cn/forum/forum.php?mod=redirect&goto=findpost&ptid=8468282&pid=22791002&fromuid=981146) |
 
 ## EPG / 台标
 
